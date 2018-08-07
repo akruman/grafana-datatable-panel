@@ -156,12 +156,6 @@ docker-compose up
 
 Then browse to http://localhost:3000
 
-### RPM
-
-A spec file is included to facilitate RPM based deployments, to generate run
-```
-make rpm
-```
 
 ## External Dependencies
 

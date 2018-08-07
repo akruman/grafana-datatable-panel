@@ -72,13 +72,13 @@ export class DatatableRenderer {
       return this.sanitize(v);
     }
     else if (style && style.link && cellTemplate && column.text === style.column) {
-      return '<a href="' + cellTemplate.replace('{}', v) + '" target="_blank">' + v + '</a>';
+      return '<a href="' + style.url.replace('{}', v).replace('{encodeURIComponent}', encodeURIComponent(v)).replace('{encodeURI}',encodeURI(v)) + '" >' + v + '</a>';
     }
     else if (style && style.link) {
       return '<a href="' + v + '" target="_blank">' + v + '</a>';
     }
     else {
-      return _.escape(v);
+      return v;
     }
   }
 
@@ -335,7 +335,7 @@ export class DatatableRenderer {
               if (_this.panel.rowNumbersEnabled) {
                 actualColumn -= 1;
               }
-              if (_this.table.columns[actualColumn].type === undefined) return;
+              if (_this.table.columns[actualColumn].type !== undefined) return;
               // for coloring rows, get the "worst" threshold
               var rowColor = null;
               var color = null;

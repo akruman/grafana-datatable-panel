@@ -2,3 +2,70 @@
   margin-top: 20px;
   text-align: center;
 }
+
+hr {
+	border-top: 2px dashed #8c8b8b;
+}
+
+main {   
+  font-family: "Courier New";    
+  padding: 0px 0px;
+  height: 100%;
+  white-space: normal;
+  font-size: 14px;
+}
+
+.wrap_predicates {
+  white-space: normal;
+}
+
+.expand_input {
+  display: none;
+  visibility: hidden;
+}
+label {
+  display: block;
+  color: #666;
+  padding:.2em;
+  white-space: nowrap;
+}
+label:hover {
+  color: #000;
+  padding:.2em;
+  font-weight: bold;
+}
+label::before {
+  display: inline-block;
+  content: " ";
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: rotate(90deg) translateY(-0px);
+}
+.expand {
+  height: 100%;
+  overflow: hidden;   
+  color: black;
+  padding: 0px 4px;
+  line-height: 1.8;
+}
+section {
+  padding: 0px 0px;  
+}
+.toggle:checked ~ .expand {  
+  height: 0px;
+}
+.toggle:checked ~ label::before {   
+  content: " ";
+  transform: rotate(0deg) translateX(0px);
+}
+.mark,mark{padding:.2em;border: 1px dashed grey; font-family: "Courier New"; background:white;}
+.match,match{padding:.2em;background: #ffff96; font-family: "Courier New";border: 1px solid #e0e0e0;}
+
+.special,special{ box-shadow: 2px 2px 2px #999999; padding:.3em; background: #00a2e8; font-family: "Courier New"; border-radius: 5px; color: white}
+.req-crlf,req-crlf{background: grey; font-family: "Courier New"; border-radius: 5px; color: white}
+
+.hideValue,hideValue{ box-shadow: 2px 2px 2px #999999; background: #ffb08a; font-family: "Courier New"; border-radius: 5px; background-image: url("../img/cut.png");}
+

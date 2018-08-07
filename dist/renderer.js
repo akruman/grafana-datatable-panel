@@ -98,11 +98,11 @@ System.register(['jquery', 'app/core/utils/kbn', 'moment', './libs/datatables.ne
             if (style && style.sanitize) {
               return this.sanitize(v);
             } else if (style && style.link && style.url && column.text === style.column) {
-              return '<a href="' + style.url.replace('{}', v) + '" target="_blank">' + v + '</a>';
+              return '<a href="' + style.url.replace('{}', v).replace('{encodeURIComponent}', encodeURIComponent(v)).replace('{encodeURI}',encodeURI(v)) + '" >' + v + '</a>';
             } else if (style && style.link) {
               return '<a href="' + v + '" target="_blank">' + v + '</a>';
             } else {
-              return _.escape(v);
+              return v;
             }
           }
         }, {

@@ -1,7 +1,7 @@
 {
     "type": "panel",
     "name": "Datatable Panel",
-    "id": "briangann-datatable-panel",
+    "id": "f5-briangann-datatable-panel",
     "info": {
         "description": "Datatable panel for Grafana",
         "author": {
@@ -45,8 +45,8 @@
             "name": "Thresholding with Value Coloring",
             "path": "screenshots/datatable-threshold-value.png"
         }],
-        "version": "0.0.6",
-        "updated": "2018-02-27"
+        "version": "0.0.6.f5",
+        "updated": "2018-08-02"
     },
 
     "dependencies": {
